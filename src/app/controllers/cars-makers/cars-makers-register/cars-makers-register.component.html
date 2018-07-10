@@ -1,0 +1,30 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <h2>Cadastrar fabricante</h2>
+  </div>
+</div>
+
+<form autocomplete="off">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <p-growl [(value)]="messages"></p-growl>
+    </div>
+  </div>
+  <div class="ui-g maker-register-form">
+    <div class="ui-g-8 ui-g-offset-2 ui-fluid">
+      <label>Nome:</label>
+      <input pInputText id="name" name="name" placeholder="Nome do Fabricante" [(ngModel)]="carMaker.name" required />
+    </div>
+    <div class="ui-g-8 ui-g-offset-2 ui-fluid">
+      <label>Logo:</label>
+      <div>
+          <input type="file" accept="image/*" id="image" name="image" (change)="setImage($event)" required />
+      </div>
+    </div>
+    <div class="ui-g-8 ui-g-offset-2 ui-fluid">
+        <div>
+            <p-button id="registrar" name="registrar" label="Registrar" (onClick)="register()"></p-button>
+        </div>
+      </div>
+  </div>
+</form>

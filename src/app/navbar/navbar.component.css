@@ -1,0 +1,13 @@
+header .topo {
+  background-color: #1e94d2;
+  width: 100%;
+  padding: 10px 0;
+  height: 2rem;
+}
+header .title {
+  color: aliceblue;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}

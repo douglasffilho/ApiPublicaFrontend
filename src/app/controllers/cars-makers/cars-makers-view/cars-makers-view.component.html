@@ -1,0 +1,21 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <h3>Fabricantes de carros</h3>
+    <p-table [value]="makers">
+      <ng-template pTemplate="header">
+        <tr>
+          <th class="col-header-id">Código</th>
+          <th>Nome</th>
+          <th>Logo</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-maker>
+        <tr>
+          <td>{{ maker.id }}</td>
+          <td>{{ maker.name }}</td>
+          <td><img [src]="'data:image/jpg;base64, ' + maker.image | safeImage"/></td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

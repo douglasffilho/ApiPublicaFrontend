@@ -1,0 +1,10 @@
+.maker-register-form {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 1rem;
+  width: -webkit-fill-available;
+}
+.maker-register-form div :nth-child(2) {
+  margin-top: 1rem;
+}
