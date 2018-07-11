@@ -1,6 +1,9 @@
 <div class="ui-g">
   <div class="ui-g-12">
     <h3>Fabricantes de carros</h3>
+    <div class="loader" [hidden]="makers.length > 0">
+      <img src="assets/loader/loading.png" />
+    </div>
     <p-table [value]="makers">
       <ng-template pTemplate="header">
         <tr>

@@ -5,3 +5,23 @@ body {
 .col-header-id {
   width: 150px;
 }
+
+.loader {
+  display: block;
+  height: 2rem;
+}
+
+.loader[hidden] {
+  display: none;
+}
+
+.loader img {
+  height: inherit;
+  animation: spin 1s infinite steps(12);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}

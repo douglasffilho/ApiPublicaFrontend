@@ -16,7 +16,7 @@ export class CarsMakersRegisterComponent implements OnInit {
 
   messages = [];
 
-  files = [];
+  imageFile = 'Escolha uma imagem para logotipo';
 
   constructor(private carsMakersService: CarsMakersService) { }
 
@@ -30,12 +30,22 @@ export class CarsMakersRegisterComponent implements OnInit {
   }
 
   setImage(event) {
+    this.imageFile = 'Escolha uma imagem para logotipo';
     const file: File = event.target.files[0];
-    const reader: FileReader = new FileReader();
 
-    reader.onloadend = () => this.carMaker.image = reader.result.substr(reader.result.indexOf(',') + 1);
+    if (file instanceof File) {
 
-    reader.readAsDataURL(file);
+      const reader: FileReader = new FileReader();
+
+      reader.onloadend = () => {
+        this.carMaker.image = reader.result.substr(reader.result.indexOf(',') + 1);
+        if (file !== undefined && file != null) {
+          this.imageFile = file.name;
+        }
+      };
+
+      reader.readAsDataURL(file);
+    }
   }
 
   register() {

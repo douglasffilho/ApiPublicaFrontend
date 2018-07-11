@@ -13,12 +13,12 @@
   <div class="ui-g maker-register-form">
     <div class="ui-g-8 ui-g-offset-2 ui-fluid">
       <label>Nome:</label>
-      <input pInputText id="name" name="name" placeholder="Nome do Fabricante" [(ngModel)]="carMaker.name" required />
+      <input pInputText id="name" name="name" placeholder="Nome do Fabricante" [(ngModel)]="carMaker.name" />
     </div>
     <div class="ui-g-8 ui-g-offset-2 ui-fluid">
-      <label>Logo:</label>
-      <div>
-          <input type="file" accept="image/*" id="image" name="image" (change)="setImage($event)" required />
+      <div class="input-file">
+          <input type="file" accept="image/*" id="image" name="image" (change)="setImage($event)" />
+          <label for="image" [textContent]="imageFile"></label>
       </div>
     </div>
     <div class="ui-g-8 ui-g-offset-2 ui-fluid">

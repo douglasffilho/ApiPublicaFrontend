@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarsMakersService } from '../../../services/cars-makers/cars-makers.service';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-cars-makers-view',
@@ -8,7 +9,7 @@ import { CarsMakersService } from '../../../services/cars-makers/cars-makers.ser
 })
 export class CarsMakersViewComponent implements OnInit {
 
-  makers: Array<any>;
+  makers: Array<any> = [];
 
   constructor(private carMakersService: CarsMakersService) { }
 
@@ -17,9 +18,11 @@ export class CarsMakersViewComponent implements OnInit {
   }
 
   list() {
-    this.carMakersService
-    .list()
-    .subscribe(response => this.makers = response);
+    interval(5000).subscribe(i => {
+      this.carMakersService
+      .list()
+      .subscribe(response => this.makers = response);
+    });
   }
 
 }
