@@ -2,12 +2,27 @@ header .topo {
   background-color: #1e94d2;
   width: 100%;
   padding: 10px 0;
-  height: 2rem;
-}
-header .title {
-  color: aliceblue;
-  font-size: 2rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
-  padding: 0;
-  margin: 0;
+}
+
+.navbar-link {
+  cursor: pointer;
+  text-decoration: unset;
+  background-color: aliceblue;
+  color: #1e94d2;
+  margin: 0.1rem 1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  text-align: center;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+  cursor: pointer;
+  text-decoration: unset;
+  color: #1e94d2;
 }

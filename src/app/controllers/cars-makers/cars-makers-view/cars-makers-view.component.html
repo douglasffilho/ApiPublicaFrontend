@@ -1,24 +1,2 @@
-<div class="ui-g">
-  <div class="ui-g-12">
-    <h3>Fabricantes de carros</h3>
-    <div class="loader" [hidden]="makers.length > 0">
-      <img src="assets/loader/loading.png" />
-    </div>
-    <p-table [value]="makers">
-      <ng-template pTemplate="header">
-        <tr>
-          <th class="col-header-id">Código</th>
-          <th>Nome</th>
-          <th>Logo</th>
-        </tr>
-      </ng-template>
-      <ng-template pTemplate="body" let-maker>
-        <tr>
-          <td>{{ maker.id }}</td>
-          <td>{{ maker.name }}</td>
-          <td><img [src]="'data:image/jpg;base64, ' + maker.image | safeImage"/></td>
-        </tr>
-      </ng-template>
-    </p-table>
-  </div>
-</div>
+<app-cars-makers-register (registeredCarMaker)="makersView.list()"></app-cars-makers-register>
+<app-cars-makers-list #makersView></app-cars-makers-list>

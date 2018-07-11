@@ -1,6 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { CarMaker } from '../../../models/car-maker';
-import { CarsMakersService } from '../../../services/cars-makers/cars-makers.service';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { CarMaker } from '../../../../models/car-maker';
+import { CarsMakersService } from '../../../../services/cars-makers/cars-makers.service';
 
 @Component({
   selector: 'app-cars-makers-register',
